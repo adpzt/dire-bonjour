@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    animation: moveAndColor 5s infinite alternate, spin 2s linear infinite;
+}
+
+@keyframes moveAndColor {
+    0% {
+        transform: translateX(0) translateY(0);
+        color: rgb(0, 0, 0);
+    }
+    20% {
+        transform: translateX(50px) translateY(-50px);
+        color: rgb(158, 158, 177);
+    }
+    30% {
+        transform: translateX(0) translateY(0);
+        color: rgb(45, 255, 45);
+    }
+    50% {
+        transform: translateX(-50px) translateY(50px);
+        color: rgb(94, 79, 51);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        color: rgb(122, 20, 20);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
